@@ -12,9 +12,17 @@ export class AppComponent {
   listCustomer: any
   constructor(private customerService: CustomerService) { }
 
-  ngOnInit() {
+  ngOnInit():void {
+    this.get();
+  }
+
+  get() {
     this.customerService.getCustomers().subscribe((data:any) => {
       this.listCustomer = data
     })
+  }
+
+  add() {
+    
   }
 }
