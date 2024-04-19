@@ -16,7 +16,7 @@
   </div>
   <div class="right-side">
     <h2>Customer Table</h2>
-    <nz-table #basicTable [nzData]="customers">
+    <nz-table #basicTable >
       <thead>
         <tr>
           <th>ID</th>
@@ -24,13 +24,18 @@
           <th>Age</th>
           <th>Phone</th>
           <th>Address</th>
+          <th>Action</th>
         </tr>
-        <tr *ngFor="let customer of customers">
-          <td>{{ customer.id }}</td>
-          <td>{{ customer.name }}</td>
-          <td>{{ customer.age }}</td>
-          <td>{{ customer.phone }}</td>
-          <td>{{ customer.address }}</td>
+        <tr *ngFor="let listCustomer of listCustomer">
+          <td>{{ listCustomer.id }}</td>
+          <td>{{ listCustomer.name }}</td>
+          <td>{{ listCustomer.age }}</td>
+          <td>{{ listCustomer.phone }}</td>
+          <td>{{ listCustomer.address }}</td>
+          <td>
+            <button>Edit</button>
+            <button>Delete</button>
+          </td>
         </tr>
       </thead>
     </nz-table>

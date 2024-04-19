@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { NzTableModule } from 'ng-zorro-antd/table';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NzTableModule
+    NzTableModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

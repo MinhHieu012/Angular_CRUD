@@ -3,134 +3,72 @@
         {
             "id": "1",
             "name": "Karis",
+            "age": "21",
             "address": "21 Street Ave",
             "phone": "426-123-4567"
         },
         {
             "id": "2",
             "name": "John Doe",
+            "age": "21",
             "address": "123 Main St",
             "phone": "5551234"
         },
         {
             "id": "3",
             "name": "Alice Smith",
+            "age": "21",
             "address": "456 Elm St",
             "phone": "5555678"
         },
         {
             "id": "4",
             "name": "Bob Johnson",
+            "age": "21",
             "address": "789 Oak St",
             "phone": "5559101"
         },
         {
             "id": "5",
             "name": "Emily Brown",
+            "age": "21",
             "address": "101 Pine St",
             "phone": "5551212"
         },
         {
             "id": "6",
             "name": "Michael Lee",
+            "age": "21",
             "address": "555 Maple Ave",
             "phone": "5551313"
         },
         {
             "id": "7",
             "name": "Sophia Rodriguez",
+            "age": "21",
             "address": "777 Cedar Ln",
             "phone": "5551414"
         },
         {
             "id": "8",
             "name": "Daniel Martinez",
+            "age": "21",
             "address": "888 Birch Rd",
             "phone": "5551515"
         },
         {
             "id": "9",
             "name": "Emma Wilson",
+            "age": "21",
             "address": "999 Walnut Blvd",
             "phone": "5551616"
         },
         {
             "id": "10",
             "name": "James Taylor",
+            "age": "21",
             "address": "1111 Pineapple St",
             "phone": "5551717"
-        },
-        {
-            "id": "11",
-            "name": "Olivia Brown",
-            "address": "2222 Cherry Ave",
-            "phone": "5551818"
-        },
-        {
-            "id": "12",
-            "name": "William Anderson",
-            "address": "3333 Peach St",
-            "phone": "5551919"
-        },
-        {
-            "id": "13",
-            "name": "Ava Garcia",
-            "address": "4444 Grapevine Ln",
-            "phone": "5552020"
-        },
-        {
-            "id": "14",
-            "name": "Alexander Nguyen",
-            "address": "5555 Apple Dr",
-            "phone": "5552121"
-        },
-        {
-            "id": "15",
-            "name": "Mia Hernandez",
-            "address": "6666 Orange Ave",
-            "phone": "5552222"
-        },
-        {
-            "id": "16",
-            "name": "Benjamin Ramirez",
-            "address": "7777 Lemon Blvd",
-            "phone": "5552323"
-        },
-        {
-            "id": "17",
-            "name": "Charlotte Kim",
-            "address": "8888 Banana St",
-            "phone": "5552424"
-        },
-        {
-            "id": "18",
-            "name": "Ethan Patel",
-            "address": "9999 Watermelon Rd",
-            "phone": "5552525"
-        },
-        {
-            "id": "19",
-            "name": "Amelia Li",
-            "address": "10101 Kiwi Ave",
-            "phone": "5552626"
-        },
-        {
-            "id": "20",
-            "name": "Henry Wu",
-            "address": "11111 Mango Ln",
-            "phone": "5552727"
-        },
-        {
-            "id": "21",
-            "name": "Isabella Chang",
-            "address": "12121 Pine St",
-            "phone": "5552828"
-        },
-        {
-            "id": "22",
-            "name": "Liam Wong",
-            "address": "13131 Apple St",
-            "phone": "5552929"
         }
     ]
 }
