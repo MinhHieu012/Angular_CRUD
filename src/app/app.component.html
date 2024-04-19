@@ -1,38 +1,38 @@
 <div class="main">
-    <div class="left-side">
-        <h2>Customer Form</h2>
-        <form class="form">
-            <p>Fullname:</p>
-            <input type="text" id="fullname" name="fullname" placeholder="Enter Fullname">
-            <p>Age:</p>
-            <input type="number" id="number" name="number" placeholder="Enter Age">
-            <p>Phone:</p>
-            <input type="phone" id="phone" name="phone" placeholder="Enter Phone">
-            <p>Address:</p>
-            <input type="text" id="address" name="address" placeholder="Enter Address">
-            <button type="submit">Add</button>
-            <button type="submit">Update</button>
-        </form>
-    </div>
-    <div class="right-side">
-        <h2>Customer Table</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Fullname</th>
-                    <th>Age</th>
-                    <th>Phone</th>
-                    <th>Address</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>John Doe</td>
-                    <td>25</td>
-                    <td>123-456-7890</td>
-                    <td>123 Main St</td>
-                </tr>
-            </thead>
-        </table>
-    </div>
+  <div class="left-side">
+    <h2>Customer Form</h2>
+    <form class="form">
+      <p>Full Name:</p>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name" />
+      <p>Age:</p>
+      <input type="number" id="number" name="number" placeholder="Enter Age" />
+      <p>Phone:</p>
+      <input type="phone" id="phone" name="phone" placeholder="Enter Phone" />
+      <p>Address:</p>
+      <input type="text" id="address" name="address" placeholder="Enter Address" />
+      <button type="submit">Add</button>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  <div class="right-side">
+    <h2>Customer Table</h2>
+    <nz-table #basicTable>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>Age</th>
+          <th>Phone</th>
+          <th>Address</th>
+        </tr>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.id }}</td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.age }}</td>
+          <td>{{ customer.phone }}</td>
+          <td>{{ customer.address }}</td>
+        </tr>
+      </thead>
+    </nz-table>
+  </div>
 </div>
