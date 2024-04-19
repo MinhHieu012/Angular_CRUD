@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+}
+
+.left-side {
+    width: 50%;
+}
+
+.right-side {
+    width: 50%;
+}
+
+button {
+    display: block;
+    margin-top: 15px;
+}
