@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import customers from './database/database.json';
 import { CustomerService } from './customer.service';
+import { Customer } from './types/customer.entity';
 
 @Component({
   selector: 'app-root',
@@ -8,21 +9,39 @@ import { CustomerService } from './customer.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+
+  addCustomer: Customer = {
+    id: 0,
+    name: '',
+    age: 0,
+    phone: '',
+    address: ''
+  }
+
   customer: any
   listCustomer: any
   constructor(private customerService: CustomerService) { }
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.get();
   }
 
   get() {
-    this.customerService.getCustomers().subscribe((data:any) => {
+    this.customerService.getCustomers().subscribe((data: any) => {
       this.listCustomer = data
     })
   }
 
   add() {
-    
+    this.customerService.addCustomer(this.addCustomer).subscribe((customer: any) => {
+      this.addCustomer = customer
+    })
+    this.get()
+  }
+
+  delete(id: Customer) {
+    this.customerService.deleteCustomer(id).subscribe((customer: any) => {
+    })
+    this.get()
   }
 }

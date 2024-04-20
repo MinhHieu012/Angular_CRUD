@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { HttpClientModule } from '@angular/common/http';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     AppRoutingModule,
     NzTableModule,
     HttpClientModule,
-    NzInputModule
+    NzInputModule,
+    FormsModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]

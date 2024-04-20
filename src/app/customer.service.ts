@@ -7,14 +7,18 @@ import { Customer } from './types/customer.entity';
   providedIn: 'root'
 })
 export class CustomerService {
-  public message$: BehaviorSubject<string> = new BehaviorSubject('');
+  public message$: BehaviorSubject<string> = new BehaviorSubject('')
   constructor(private http: HttpClient) { }
 
   public getCustomers(): Observable<Customer> {
-    return this.http.get<Customer>('http://localhost:3000/customers');
+    return this.http.get<Customer>('http://localhost:3000/customers')
   }
 
   public addCustomer(customer: Customer): Observable<Customer> {
-    return this.http.post<Customer>('http://localhost:3000/customers', customer);
+    return this.http.post<Customer>('http://localhost:3000/customers', customer)
+  }
+
+  public deleteCustomer(id: Customer): Observable<Customer> {
+    return this.http.delete<Customer>(`http://localhost:3000/customers/${id}`)
   }
 }

@@ -1,17 +1,17 @@
 <div class="main">
   <div class="left-side">
     <h2>Customer Form</h2>
-    <form class="form">
+    <form class="form" #form="ngForm" (ngSubmit)="add()">
       <p>Full Name:</p>
-      <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name" />
+      <input type="text" [(ngModel)]="addCustomer.name" id="fullname" name="fullname" placeholder="Enter Full Name" />
       <p>Age:</p>
-      <input type="number" id="number" name="number" placeholder="Enter Age" />
+      <input type="number" [(ngModel)]="addCustomer.age" id="number" name="number" placeholder="Enter Age" />
       <p>Phone:</p>
-      <input type="phone" id="phone" name="phone" placeholder="Enter Phone" />
+      <input type="phone" [(ngModel)]="addCustomer.phone" ngModel id="phone" name="phone" placeholder="Enter Phone" />
       <p>Address:</p>
-      <input type="text" id="address" name="address" placeholder="Enter Address" />
-      <button type="submit">Add</button>
-      <button type="submit">Update</button>
+      <input type="text" [(ngModel)]="addCustomer.address" id="address" name="address" placeholder="Enter Address" />
+      <button>Add</button>
+      <button>Update</button>
     </form>
   </div>
   <div class="right-side">
@@ -33,8 +33,8 @@
           <td>{{ listCustomer.phone }}</td>
           <td>{{ listCustomer.address }}</td>
           <td>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button class="btn">Edit</button>
+            <button class="btn" (click)="delete(listCustomer.id)">Delete</button>
           </td>
         </tr>
       </thead>
