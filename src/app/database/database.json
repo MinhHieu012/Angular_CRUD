@@ -1,74 +1,18 @@
 {
-    "customers": [
-        {
-            "id": "1",
-            "name": "Karis",
-            "age": "21",
-            "address": "21 Street Ave",
-            "phone": "426-123-4567"
-        },
-        {
-            "id": "2",
-            "name": "John Doe",
-            "age": "21",
-            "address": "123 Main St",
-            "phone": "5551234"
-        },
-        {
-            "id": "3",
-            "name": "Alice Smith",
-            "age": "21",
-            "address": "456 Elm St",
-            "phone": "5555678"
-        },
-        {
-            "id": "4",
-            "name": "Bob Johnson",
-            "age": "21",
-            "address": "789 Oak St",
-            "phone": "5559101"
-        },
-        {
-            "id": "5",
-            "name": "Emily Brown",
-            "age": "21",
-            "address": "101 Pine St",
-            "phone": "5551212"
-        },
-        {
-            "id": "6",
-            "name": "Michael Lee",
-            "age": "21",
-            "address": "555 Maple Ave",
-            "phone": "5551313"
-        },
-        {
-            "id": "7",
-            "name": "Sophia Rodriguez",
-            "age": "21",
-            "address": "777 Cedar Ln",
-            "phone": "5551414"
-        },
-        {
-            "id": "8",
-            "name": "Daniel Martinez",
-            "age": "21",
-            "address": "888 Birch Rd",
-            "phone": "5551515"
-        },
-        {
-            "id": "9",
-            "name": "Emma Wilson",
-            "age": "21",
-            "address": "999 Walnut Blvd",
-            "phone": "5551616"
-        },
-        {
-            "id": "10",
-            "name": "James Taylor",
-            "age": "21",
-            "address": "1111 Pineapple St",
-            "phone": "5551717"
-        }
-    ]
+  "customers": [
+    {
+      "id": "1",
+      "name": "Lê Minh Hiếu",
+      "age": 12,
+      "phone": "+84967710509",
+      "address": "Hà Nội"
+    },
+    {
+      "id": 0,
+      "name": "Lê Hiếu",
+      "age": 21,
+      "phone": "0967710509",
+      "address": "306 Nguyễn Trãi"
+    }
+  ]
 }
