@@ -26,8 +26,8 @@
           <th>Address</th>
           <th>Action</th>
         </tr>
-        <tr *ngFor="let listCustomer of listCustomer">
-          <td>{{ listCustomer.id }}</td>
+        <tr *ngFor="let listCustomer of listCustomer; let i = index">
+          <td>{{ i + 1 }}</td>
           <td>{{ listCustomer.name }}</td>
           <td>{{ listCustomer.age }}</td>
           <td>{{ listCustomer.phone }}</td>

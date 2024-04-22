@@ -27,6 +27,13 @@
       "age": 12,
       "phone": "123456",
       "address": "HNoi"
+    },
+    {
+      "id": "e55e",
+      "name": "hieu120",
+      "age": 12,
+      "phone": "0967710501",
+      "address": "Hà Nội"
     }
   ]
 }
