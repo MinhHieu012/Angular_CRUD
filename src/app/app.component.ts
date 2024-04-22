@@ -9,9 +9,7 @@ import { Customer } from './types/customer.entity';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-
   addCustomer: Customer = {
-    id: 0,
     name: '',
     age: 0,
     phone: '',
@@ -20,6 +18,7 @@ export class AppComponent {
 
   customer: any
   listCustomer: any
+
   constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
@@ -35,13 +34,13 @@ export class AppComponent {
   add() {
     this.customerService.addCustomer(this.addCustomer).subscribe((customer: any) => {
       this.addCustomer = customer
+      this.get()
     })
-    this.get()
   }
 
   delete(id: Customer) {
     this.customerService.deleteCustomer(id).subscribe((customer: any) => {
+      this.get()
     })
-    this.get()
   }
 }

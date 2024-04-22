@@ -8,11 +8,25 @@
       "address": "Hà Nội"
     },
     {
-      "id": 0,
+      "id": "2",
       "name": "Lê Hiếu",
       "age": 21,
       "phone": "0967710509",
       "address": "306 Nguyễn Trãi"
+    },
+    {
+      "id": "3",
+      "name": "Lê Hiếu",
+      "age": 21,
+      "phone": "0967710509",
+      "address": "306 Nguyễn Trãi"
+    },
+    {
+      "id": "e2e6",
+      "name": "hiếu",
+      "age": 12,
+      "phone": "123456",
+      "address": "HNoi"
     }
   ]
 }
