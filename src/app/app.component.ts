@@ -39,26 +39,36 @@ export class AppComponent {
   }
 
   add() {
-    this.customerService.addCustomer(this.addCustomer).subscribe((customer: any) => {
-      this.addCustomer = customer
-      console.log(customer, 'check abc');
+    this.customerService.addCustomer(this.addCustomer).subscribe(() => {
       this.get()
       this.addCustomer = {
         name: '',
-        age: 0,
+        age: null,
         phone: '',
         address: ''
       }
     })
   }
 
-  // edit(customer: any) {
-  //   this.selectedCustomer = customer
-  //   console.log(customer, 'check');
-  // }
+  edit(customer: Customer) {
+    this.selectedCustomer = customer
+  }
+
+  update(dataUpdate: Customer) {
+    this.customerService.updateCustomer(dataUpdate).subscribe(() => {
+      this.get()
+      this.selectedCustomer = {
+        id: 0,
+        name: '',
+        age: null,
+        phone: '',
+        address: ''
+      }
+    })
+  }
 
   delete(id: Customer) {
-    this.customerService.deleteCustomer(id).subscribe((customer: any) => {
+    this.customerService.deleteCustomer(id).subscribe(() => {
       this.get()
     })
   }

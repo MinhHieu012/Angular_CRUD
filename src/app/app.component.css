@@ -6,3 +6,11 @@
 td {
     padding: 10px;
 }
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+}

@@ -1,17 +1,17 @@
 {
   "customers": [
     {
-      "id": "3",
-      "name": "Lê Hiếu",
+      "id": "e899",
+      "name": "hieu120",
       "age": 21,
-      "phone": "0967710509",
-      "address": "306 Nguyễn Trãi"
+      "phone": "0967710501",
+      "address": "Hà Nội"
     },
     {
-      "id": "bf63",
-      "name": "hieu120",
-      "age": 12,
-      "phone": "0967710501",
+      "id": "817a",
+      "name": "Zalo",
+      "age": 201,
+      "phone": "0968662809",
       "address": "Hà Nội"
     }
   ]

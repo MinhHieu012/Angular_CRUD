@@ -1,18 +1,19 @@
 <div class="main">
   <div class="left-side">
     <h2>Customer Form</h2>
-    <form class="form" #form="ngForm" (ngSubmit)="add()">
-      <p>Full Name:</p>
-      <input type="text" [(ngModel)]="addCustomer.name" id="fullname" name="fullname" placeholder="Enter Full Name" />
-      <p>Age:</p>
-      <input type="number" [(ngModel)]="addCustomer.age" id="number" name="number" placeholder="Enter Age" />
-      <p>Phone:</p>
-      <input type="phone" [(ngModel)]="addCustomer.phone" ngModel id="phone" name="phone" placeholder="Enter Phone" />
-      <p>Address:</p>
-      <input type="text" [(ngModel)]="addCustomer.address" id="address" name="address" placeholder="Enter Address" />
-      <button>Add</button>
-      <button>Update</button>
+    <form class="form" #form="ngForm" >
+      <label>Full Name:</label>
+      <input type="text" [(ngModel)]="addCustomer.name" [(ngModel)]="selectedCustomer.name" id="fullname" name="fullname" placeholder="Enter Full Name" required/>
+      <label>Age:</label>
+      <input type="number" [(ngModel)]="addCustomer.age" [(ngModel)]="selectedCustomer.age" id="number" name="number" placeholder="Enter Age" />
+      <label>Phone:</label>
+      <input type="phone" [(ngModel)]="addCustomer.phone" [(ngModel)]="selectedCustomer.phone" ngModel id="phone" name="phone" placeholder="Enter Phone" />
+      <label>Address:</label>
+      <input type="text" [(ngModel)]="addCustomer.address" [(ngModel)]="selectedCustomer.address" id="address" name="address" placeholder="Enter Address" />
+      <button (click)="add()">Add</button>
+      <button (click)="update(selectedCustomer)">Update</button>
     </form>
+
   </div>
   <div class="right-side">
     <h2>Customer Table</h2>
@@ -33,7 +34,7 @@
           <td>{{ listCustomer.phone }}</td>
           <td>{{ listCustomer.address }}</td>
           <td>
-            <button class="btn">Edit</button>
+            <button class="btn" (click)="edit(listCustomer)">Edit</button>
             <button class="btn" (click)="delete(listCustomer.id)">Delete</button>
           </td>
         </tr>

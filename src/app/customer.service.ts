@@ -6,6 +6,7 @@ import { Customer } from './types/customer.entity';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CustomerService {
   public message$: BehaviorSubject<string> = new BehaviorSubject('')
   constructor(private http: HttpClient) { }
@@ -20,5 +21,9 @@ export class CustomerService {
 
   public deleteCustomer(id: Customer): Observable<Customer> {
     return this.http.delete<Customer>(`http://localhost:3000/customers/${id}`)
+  }
+
+  public updateCustomer(dataUpdate: Customer): Observable<Customer> {
+    return this.http.put<Customer>(`http://localhost:3000/customers/${dataUpdate.id}`, dataUpdate)
   }
 }
