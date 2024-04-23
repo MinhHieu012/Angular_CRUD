@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AddComponent } from './modal/add/add.component';
 import { UpdateComponent } from './modal/update/update.component';
 import { DeleteComponent } from './modal/delete/delete.component';
-import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzModalModule, NzModalService } from 'ng-zorro-antd/modal';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient } from '@angular/common/http';
@@ -32,9 +32,12 @@ import { HouseComponent } from './house/house.component';
     FormsModule,
     NzModalModule,
     NzButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
-  providers: [HttpClient],
+  providers: [
+    HttpClient, 
+    NzModalService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
