@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import customers from './database/database.json';
-import { CustomerService } from './customer.service';
-import { Customer } from './types/customer.entity';
+import { Component } from '@angular/core';
+import { CustomerService } from '../../services/customer.service';
+import { Customer } from '../../types/customer.entity';
 
 @Component({
   selector: 'app-root',
@@ -39,6 +38,12 @@ export class AppComponent {
   }
 
   add() {
+    window.confirm('Are you sure with this info \n'
+      + 'Full Name: ' + this.addCustomer.name + '\n'
+      + 'Age: ' + this.addCustomer.age + '\n'
+      + 'Phone: ' + this.addCustomer.phone + '\n'
+      + 'Address: ' + this.addCustomer.address + '\n'
+    )
     this.customerService.addCustomer(this.addCustomer).subscribe(() => {
       this.get()
       this.addCustomer = {
@@ -50,15 +55,22 @@ export class AppComponent {
     })
   }
 
-  edit(customer: Customer) {
-    this.selectedCustomer = customer
+  edit(customerInput: Customer) {
+    this.selectedCustomer = customerInput
   }
 
   update(dataUpdate: Customer) {
+    window.confirm(
+      'Are you sure with this info \n'
+      + 'Full Name: ' + this.selectedCustomer.name + '\n'
+      + 'Age: ' + this.selectedCustomer.age + '\n'
+      + 'Phone: ' + this.selectedCustomer.phone + '\n'
+      + 'Address: ' + this.selectedCustomer.address + '\n'
+    )
     this.customerService.updateCustomer(dataUpdate).subscribe(() => {
       this.get()
       this.selectedCustomer = {
-        id: 0,
+        id: null,
         name: '',
         age: null,
         phone: '',
