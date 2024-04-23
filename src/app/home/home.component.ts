@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { CustomerService } from './services/customer.service';
-import { Customer } from './interface/customer.entity';
+import { CustomerService } from '../services/customer.service';
+import { Customer } from '../interface/customer.entity';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './home/home.component.html',
-  styleUrl: './app.component.css',
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class AppComponent {
+export class HomeComponent {
   addCustomer: Customer = {
     name: '',
     age: null,
