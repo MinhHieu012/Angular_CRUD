@@ -9,7 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { AddComponent } from './modal/add/add.component';
 import { UpdateComponent } from './modal/update/update.component';
 import { DeleteComponent } from './modal/delete/delete.component';
-import { HomeComponent } from './home/home.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient } from '@angular/common/http';
+import { HouseComponent } from './house/house.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,7 @@ import { HomeComponent } from './home/home.component';
     AddComponent,
     UpdateComponent,
     DeleteComponent,
-    HomeComponent,
+    HouseComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,9 +29,12 @@ import { HomeComponent } from './home/home.component';
     NzTableModule,
     HttpClientModule,
     NzInputModule,
-    FormsModule
+    FormsModule,
+    NzModalModule,
+    NzButtonModule,
+    BrowserAnimationsModule
   ],
-  providers: [ ],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
