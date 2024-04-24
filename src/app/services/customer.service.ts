@@ -9,6 +9,7 @@ import { Customer } from '../interface/customer.entity';
 
 export class CustomerService {
   public message$: BehaviorSubject<string> = new BehaviorSubject('')
+
   constructor(private http: HttpClient) { }
 
   public getCustomers(): Observable<Customer> {
@@ -25,5 +26,10 @@ export class CustomerService {
 
   public updateCustomer(dataUpdate: Customer): Observable<Customer> {
     return this.http.put<Customer>(`http://localhost:3000/customers/${dataUpdate.id}`, dataUpdate)
+  }
+
+  public getTextSearch(textSearch: any): Observable<Customer[]> {
+     console.log(textSearch, 'check text search');
+    return this.http.get<Customer[]>(`http://localhost:3000/customers?q=${textSearch}`)
   }
 }

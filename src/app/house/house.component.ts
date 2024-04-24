@@ -15,6 +15,7 @@ export class HouseComponent {
     phone: '',
     address: ''
   };
+
   selectedCustomer: Customer = {
     id: 0,
     name: '',
@@ -22,6 +23,9 @@ export class HouseComponent {
     phone: '',
     address: ''
   };
+
+  textSearch: any = '';
+
   listCustomer: any;
 
   constructor(
@@ -40,5 +44,13 @@ export class HouseComponent {
 
   callGetCustomersBack(eventData: any) {
     this.getCustomers()
+  }
+
+  gettextSearch() {
+    this.customerService.getTextSearch(this.textSearch).subscribe((data:any) => {
+      console.log(this.listCustomer, 'check list customer');
+      console.log(data, 'check data');
+
+    })
   }
 }

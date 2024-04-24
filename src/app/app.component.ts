@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { CustomerService } from './services/customer.service';
-import { Customer } from './interface/customer.entity';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +6,5 @@ import { Customer } from './interface/customer.entity';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  
 }

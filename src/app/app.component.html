@@ -1,1 +1,39 @@
-<app-house></app-house>
+<nz-layout>
+    <nz-header>
+        <div class="logo"></div>
+    </nz-header>
+    <nz-layout>
+        <nz-sider nzWidth="200px" nzTheme="light">
+            <ul nz-menu nzMode="inline" class="sider-menu">
+                <li nz-submenu nzOpen nzIcon="user" nzTitle="Management">
+                    <ul>
+                        <li nz-menu-item nzSelected>
+                            <a routerLink="" routerLinkActive="active">Home</a>
+                        </li>
+                        <li nz-menu-item>
+                            <a routerLink="/add" routerLinkActive="active">Add</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nz-sider>
+        <nz-layout class="inner-layout">
+            <nz-breadcrumb>
+                <nz-breadcrumb-item>
+                    <a routerLink="" routerLinkActive="active">Home</a>
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item>
+                    <a routerLink="/add" routerLinkActive="active">Add</a>
+                </nz-breadcrumb-item>
+            </nz-breadcrumb>
+            <nz-content>
+                <router-outlet></router-outlet>
+            </nz-content>
+        </nz-layout>
+    </nz-layout>
+</nz-layout>
+
+<!-- <ul>
+    <li><a routerLink="/home" routerLinkActive="active">House</a></li>
+    <li><a routerLink="/add" routerLinkActive="active">Add</a></li>
+</ul> -->

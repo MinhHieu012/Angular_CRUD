@@ -1,9 +1,14 @@
-<div class="w-fit home">
-    <h1 class="text-3xl font-bold text-center mt-5 mb-5">CRUD Angular</h1>
+<div class="w-full home">
+    <h1 class="text-3xl font-bold text-center mb-5">CRUD Angular</h1>
     <app-add (getCustomer)="callGetCustomersBack($event)"></app-add>
-    <table class="max-w-screen-lg border-collapse bg-white border border-grey-500">
+    <input class="ml-3" type="text" placeholder="Search..." [(ngModel)]="textSearch">
+    <button title="Search" (click)="gettextSearch()">
+        <span nz-icon nzType="search" nzTheme="outline"></span>
+    </button>
+    <table class="w-full border-collapse bg-white border border-grey-500">
         <thead class="block md:table-header-group">
-            <tr class="border-grey-800 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto md:relative hover:bg-gray-50 ">
+            <tr
+                class="border-grey-800 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto md:relative hover:bg-gray-50 ">
                 <th class="md:border md:border-grey-500 p-3 px-6 py-4 font-medium text-gray-900">ID</th>
                 <th class="md:border md:border-grey-500 p-3 px-6 py-4 font-medium text-gray-900">Full Name</th>
                 <th class="md:border md:border-grey-500 p-3 px-6 py-4 font-medium text-gray-900">Age</th>
@@ -13,15 +18,23 @@
             </tr>
         </thead>
         <tbody class="block md:table-row-group">
-            <tr class="hover:bg-gray-50 transition duration-700 ease-in-out border border-grey-500 md:border-none block md:table-row" *ngFor="let listCustomer of listCustomer; let i = index">
+            <tr class="hover:bg-gray-50 transition duration-700 ease-in-out border border-grey-500 md:border-none block md:table-row"
+                *ngFor="let listCustomer of listCustomer; let i = index">
                 <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ i + 1 }}</td>
-                <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.name }}</td>
+                <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.name }}
+                </td>
                 <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.age }}</td>
-                <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.phone }}</td>
-                <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.address }}</td>
+                <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.phone }}
+                </td>
+                <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.address }}
+                </td>
                 <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">
-                    <app-update [dataCustomerId]="listCustomer.id" [dataCustomerName]="listCustomer.name" [dataCustomerAge]="listCustomer.age" [dataCustomerPhone]="listCustomer.phone" [dataCustomerAddress]="listCustomer.address" (callGetCustomersBackAfterUpdate)="callGetCustomersBack($event)"></app-update>
-                    <app-delete [itemId]="listCustomer.id" [itemName]="listCustomer.name" (callGetCustomersBackAfterDelete)="callGetCustomersBack($event)"></app-delete>
+                    <app-update [dataCustomerId]="listCustomer.id" [dataCustomerName]="listCustomer.name"
+                        [dataCustomerAge]="listCustomer.age" [dataCustomerPhone]="listCustomer.phone"
+                        [dataCustomerAddress]="listCustomer.address"
+                        (callGetCustomersBackAfterUpdate)="callGetCustomersBack($event)"></app-update>
+                    <app-delete [itemId]="listCustomer.id" [itemName]="listCustomer.name"
+                        (callGetCustomersBackAfterDelete)="callGetCustomersBack($event)"></app-delete>
                 </td>
             </tr>
         </tbody>

@@ -15,6 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient } from '@angular/common/http';
 import { HouseComponent } from './house/house.component';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
     NzModalModule,
     NzButtonModule,
     BrowserAnimationsModule,
-    NzNotificationModule
+    NzNotificationModule,
+    NzLayoutModule,
+    NzBreadCrumbModule,
+    NzMenuModule,
+    NzIconModule
   ],
   providers: [
     HttpClient, 
