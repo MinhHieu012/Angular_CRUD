@@ -9,8 +9,10 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrl: './add.component.css'
 })
 export class AddComponent {
-
+  
   @Output() getCustomer = new EventEmitter<string>();
+
+  constructor(private customerService: CustomerService) { }
 
   dataAddCustomer: Customer = {
     name: '',
@@ -29,9 +31,7 @@ export class AddComponent {
   }
 
   isVisible = false;
-
-  constructor(private customerService: CustomerService) { }
-
+  
   showModal(): void {
     this.isVisible = true;
   }

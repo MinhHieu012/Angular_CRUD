@@ -18,8 +18,8 @@ export class DeleteComponent {
 
   showConfirm(): void {
     this.modalService.confirm({
-      nzTitle: 'You want to delete item with this name: ' + this.itemName + '?',
-      nzContent: 'This action cannot be undone!',
+      nzTitle: 'Delete Customer',
+      nzContent: `You want to delete item has name <strong>${this.itemName}</strong> <br> This action cannot be undone!`,
       nzOkText: 'OK',
       nzCancelText: 'Cancel',
       nzOnOk: () => {

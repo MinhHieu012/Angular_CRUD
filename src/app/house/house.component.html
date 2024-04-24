@@ -20,7 +20,7 @@
                 <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.phone }}</td>
                 <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.address }}</td>
                 <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">
-                    <app-update></app-update>
+                    <app-update [dataCustomerId]="listCustomer.id" [dataCustomerName]="listCustomer.name" [dataCustomerAge]="listCustomer.age" [dataCustomerPhone]="listCustomer.phone" [dataCustomerAddress]="listCustomer.address" (callGetCustomersBackAfterUpdate)="callGetCustomersBack($event)"></app-update>
                     <app-delete [itemId]="listCustomer.id" [itemName]="listCustomer.name" (callGetCustomersBackAfterDelete)="callGetCustomersBack($event)"></app-delete>
                 </td>
             </tr>
