@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
 import { Customer } from '../../interface/customer.entity';
 import { Output, EventEmitter } from '@angular/core';
+import { NzNotificationService } from 'ng-zorro-antd/notification';
 
 @Component({
   selector: 'app-update',
@@ -10,7 +11,10 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class UpdateComponent {
 
-  constructor(private customerService: CustomerService) { }
+  constructor(
+    private customerService: CustomerService,
+    private notification: NzNotificationService
+  ) { }
 
   @Input() dataCustomerId: any;
   @Input() dataCustomerName: any;
@@ -41,11 +45,20 @@ export class UpdateComponent {
   handleOk(): void {
     this.customerService.updateCustomer(this.dataUpdateCustomer).subscribe(() => {
       this.isVisible = false
+      this.createNotification('success')
       this.callGetCustomersBackAfterUpdate.emit()
     })
   }
 
   handleCancel(): void {
     this.isVisible = false;
+  }
+
+  createNotification(type: string): void {
+    this.notification.create(
+      type,
+      'Updated Data Successfully',
+      'Full Name: ' + this.dataUpdateCustomer.name + ' just updated to the table'
+    );
   }
 }

@@ -1,14 +1,10 @@
 <button
     class="h-9 px-5 text-blue-700 border border-blue-500 rounded-lg mb-3 bg-white hover:bg-blue-500 hover:text-white focus:shadow-outline transition duration-700 ease-in-out bg-white"
-    nz-button 
-    [nzSize]="'large'" 
-    nzType="primary" 
-    (click)="showModal()">
+    nz-button [nzSize]="'large'" nzType="primary" (click)="showModal()">
     <span>
         Add
     </span>
 </button>
-
 
 <nz-modal [(nzVisible)]="isVisible" nzTitle="Add Customer" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" nzOkText="OK" nzCancelText="Cancel">
     <ng-container *nzModalContent>
@@ -17,25 +13,36 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2">
                     Full Name
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" [(ngModel)]="dataAddCustomer.name" id="fullname" name="fullname" placeholder="Enter Full Name" required />
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text" [(ngModel)]="dataAddCustomer.name" id="fullname" name="fullname"
+                    placeholder="Enter Full Name" required />
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2">
                     Age
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" [(ngModel)]="dataAddCustomer.age" id="number" name="number" placeholder="Enter Age" />
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="number" [(ngModel)]="dataAddCustomer.age" id="number" name="number" placeholder="Enter Age" />
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2">
                     Phone
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" [(ngModel)]="dataAddCustomer.phone" ngModel id="phone" name="phone" placeholder="Enter Phone" />
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text" [(ngModel)]="dataAddCustomer.phone" ngModel id="phone" name="phone"
+                    placeholder="Enter Phone" />
             </div>
             <div class="mb">
                 <label class="block text-gray-700 text-sm font-bold mb-2">
                     Address
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" [(ngModel)]="dataAddCustomer.address" id="address" name="address" placeholder="Enter Address" />
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text" [(ngModel)]="dataAddCustomer.address" id="address" name="address"
+                    placeholder="Enter Address" />
             </div>
         </form>
     </ng-container>
