@@ -1,20 +1,6 @@
 {
   "customers": [
     {
-      "id": "97fe",
-      "name": "hieu120",
-      "age": 21,
-      "phone": "0967710501",
-      "address": "Hà Nội"
-    },
-    {
-      "id": "1998",
-      "name": "Zalo",
-      "age": 22,
-      "phone": "0968662809",
-      "address": "Hà Nội"
-    },
-    {
       "id": "b5c4",
       "name": "hieu120",
       "age": 17,
@@ -22,16 +8,16 @@
       "address": "Hà Nội"
     },
     {
-      "id": "82b4",
-      "name": "dsd",
-      "age": 13,
-      "phone": "23",
-      "address": "32"
+      "id": "966d",
+      "name": "Zalo",
+      "age": 18,
+      "phone": "0968662809",
+      "address": "Hà Nội"
     },
     {
-      "id": "0919",
+      "id": "a610",
       "name": "Lê Hiếu",
-      "age": 18,
+      "age": 22,
       "phone": "0967710509",
       "address": "Hà Nội"
     }

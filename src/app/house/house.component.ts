@@ -39,7 +39,7 @@ export class HouseComponent {
     })
   }
 
-  callgetCustomersBack(eventData: any) {
+  callGetCustomersBack(eventData: any) {
     this.getCustomers()
   }
 

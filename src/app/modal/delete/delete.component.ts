@@ -10,16 +10,22 @@ import { NzModalService } from 'ng-zorro-antd/modal';
   styleUrl: './delete.component.css'
 })
 export class DeleteComponent {
+  @Input() itemId : any;
+  @Input() itemName : any;
+  @Output() callGetCustomersBackAfterDelete = new EventEmitter<any>();
+
   constructor(private modalService: NzModalService, private customerService: CustomerService) { }
-  
+
   showConfirm(): void {
     this.modalService.confirm({
-      nzTitle: 'You want to delete this item?',
+      nzTitle: 'You want to delete item with this name: ' + this.itemName + '?',
       nzContent: 'This action cannot be undone!',
       nzOkText: 'OK',
       nzCancelText: 'Cancel',
       nzOnOk: () => {
-        console.log("OK");
+        this.customerService.deleteCustomer(this.itemId).subscribe(() => {
+          this.callGetCustomersBackAfterDelete.emit()
+        })
       }
     })
   }
