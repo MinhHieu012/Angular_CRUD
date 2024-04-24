@@ -28,6 +28,8 @@ export class HouseComponent {
 
   listCustomer: any;
 
+  sort: any = 'Sort Data'
+
   constructor(
     private customerService: CustomerService,
   ) { }
@@ -47,10 +49,22 @@ export class HouseComponent {
   }
 
   gettextSearch() {
-    this.customerService.getTextSearch(this.textSearch).subscribe((data:any) => {
-      console.log(this.listCustomer, 'check list customer');
-      console.log(data, 'check data');
+    this.customerService.getTextSearch(this.textSearch).subscribe((data: any) => {
+      this.listCustomer = data
+    })
+  }
 
+  handleSortASC() {
+    this.customerService.SortASC().subscribe((data: any) => {
+      this.listCustomer = data
+      this.sort = 'Sorted Name A to Z'
+    })
+  }
+
+  handleSortDESC() {
+    this.customerService.SortDESC().subscribe((data: any) => {
+      this.listCustomer = data
+      this.sort = 'Sorted Name Z to A'
     })
   }
 }

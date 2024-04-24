@@ -19,6 +19,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
     NzLayoutModule,
     NzBreadCrumbModule,
     NzMenuModule,
-    NzIconModule
+    NzIconModule,
+    NzDropDownModule
   ],
   providers: [
     HttpClient, 

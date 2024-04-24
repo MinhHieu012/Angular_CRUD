@@ -1,46 +1,32 @@
 {
   "customers": [
     {
-      "id": "3663",
-      "name": "Lê Hiếu",
-      "age": 21,
-      "phone": "0967710509",
-      "address": "306 - Nguyễn Trãi"
+      "id": "1",
+      "name": "John Doe",
+      "age": 25,
+      "phone": "555-1234",
+      "address": "123 Main St"
     },
     {
-      "id": "dda1",
-      "name": "hieu12012",
-      "age": 1,
-      "phone": "9677105014",
-      "address": "Hà Nội565"
+      "id": "2",
+      "name": "Jane Smith",
+      "age": 30,
+      "phone": "555-5678",
+      "address": "456 Oak St"
     },
     {
-      "id": "579d",
-      "name": "Lê Hiếu",
-      "age": 21,
-      "phone": "0967710509",
-      "address": "306 - Nguyễn Trãi"
+      "id": "3",
+      "name": "Bob Johnson",
+      "age": 35,
+      "phone": "555-9012",
+      "address": "789 Pine St"
     },
     {
-      "id": "49df",
-      "name": "Zalo",
-      "age": 12,
-      "phone": "0968662809",
-      "address": "Hà Nội"
-    },
-    {
-      "id": "1c98",
-      "name": "Minh Hiếu",
-      "age": 19,
-      "phone": "123456789",
-      "address": "ABCDEDF"
-    },
-    {
-      "id": "94c6",
-      "name": "3232",
-      "age": null,
-      "phone": "",
-      "address": ""
+      "id": "4",
+      "name": "Alice Williams",
+      "age": 40,
+      "phone": "555-3456",
+      "address": "321 Cedar St"
     }
   ]
 }
