@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  height: fit-content;
-}
-
 .logo {
   width: 120px;
   height: 31px;
