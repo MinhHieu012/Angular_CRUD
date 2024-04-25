@@ -8,13 +8,6 @@
       "address": "123 Main St"
     },
     {
-      "id": "2",
-      "name": "Jane Smith",
-      "age": 30,
-      "phone": "555-5678",
-      "address": "456 Oak St"
-    },
-    {
       "id": "3",
       "name": "Bob Johnson",
       "age": 35,

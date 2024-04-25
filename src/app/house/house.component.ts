@@ -67,4 +67,11 @@ export class HouseComponent {
       this.sort = 'Sorted Name Z to A'
     })
   }
+
+  totalItem: any;
+  itemsPerPage: number = 2;
+  totalPage: any;
+  currentPage: number = 1;
+
+  
 }
