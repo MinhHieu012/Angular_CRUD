@@ -42,7 +42,7 @@
         </thead>
         <tbody class="block md:table-row-group">
             <tr class="hover:bg-gray-50 transition duration-700 ease-in-out border border-grey-500 md:border-none block md:table-row"
-                *ngFor="let listCustomer of listCustomer; let i = index">
+                *ngFor="let listCustomer of showItemPerPage(currentPage); let i = index">
                 <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ i + 1 }}</td>
                 <td class="p-3 md:border md:border-grey-500 text-center block md:table-cell">{{ listCustomer.name }}
                 </td>
@@ -64,9 +64,10 @@
     </table>
     <nav aria-label="Page navigation" class="flex justify-center mt-7">
         <ul class="inline-flex space-x-2">
-            <li>
+            <li (click)="onClickNavigationPrevious(currentPage - 1)">
                 <button title="btn"
-                    class="flex items-center justify-center w-10 h-10 text-indigo-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-indigo-100">
+                    class="flex items-center justify-center w-10 h-10 text-indigo-600 transition-colors duration-150 rounded-full focus:shadow-outline hover:bg-indigo-100"
+                    [disabled]="currentPage === 1">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                         <path
                             d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
@@ -76,20 +77,18 @@
             </li>
             <li>
                 <button
-                    class="w-10 h-10 text-indigo-600 transition-colors duration-150 rounded focus:shadow-outline hover:bg-indigo-100" active>
-                    1
+                    class="w-10 h-10 text-indigo-600 transition-colors duration-150 rounded focus:shadow-outline hover:bg-indigo-100" 
+                    *ngFor="let page of showTotalPage()" 
+                    [class.active] = "currentPage === page"
+                    (click)="changePage(page)">
+                    {{ page }}
                 </button>
             </li>
-            <li>
-                <button
-                    class="w-10 h-10 text-indigo-600 transition-colors duration-150 rounded focus:shadow-outline hover:bg-indigo-100">
-                    2
-                </button>
-            </li>
-            
-            <li>
+            <li
+            (click)="onClickNavigationNext(currentPage + 1)">
                 <button title="btn"
-                    class="flex items-center justify-center w-10 h-10 text-indigo-600 transition-colors duration-150 bg-white rounded-full focus:shadow-outline hover:bg-indigo-100">
+                    class="flex items-center justify-center w-10 h-10 text-indigo-600 transition-colors duration-150 bg-white rounded-full focus:shadow-outline hover:bg-indigo-100"
+                    [disabled]="currentPage === totalPage">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                         <path
                             d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"

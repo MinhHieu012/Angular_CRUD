@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CustomerService } from '../services/customer.service';
 import { Customer } from '../interface/customer.entity';
 
@@ -41,6 +41,8 @@ export class HouseComponent {
   getCustomers() {
     this.customerService.getCustomers().subscribe((data: any) => {
       this.listCustomer = data
+      this.totalPage = Math.ceil(this.listCustomer.length / this.itemsPerPage);
+      this.showTotalPage()
     })
   }
 
@@ -69,9 +71,37 @@ export class HouseComponent {
   }
 
   totalItem: any;
-  itemsPerPage: number = 2;
+  itemsPerPage: number = 1;
   totalPage: any;
   currentPage: number = 1;
 
-  
+  showItemPerPage(page: number) {
+    const start = this.itemsPerPage * (page - 1);
+    const end = start + this.itemsPerPage;
+    return this.listCustomer.slice(start, end);
+  }
+
+  showTotalPage() {
+    const totalPage = Math.ceil(this.listCustomer.length / this.itemsPerPage);
+    return Array.from({ length: totalPage }, (_, i) => i + 1);
+  }
+
+  changePage(page: number) {
+    this.currentPage = page;
+    this.getCustomerOnPage()
+  }
+
+  getCustomerOnPage() {
+    this.customerService.getCustomersOnPage(this.currentPage, this.itemsPerPage).subscribe(() => {
+      this.getCustomers()
+    })
+  }
+
+  onClickNavigationNext(page: number) {
+    this.currentPage = page
+  }
+
+  onClickNavigationPrevious(page: number) {
+    this.currentPage = page;
+  }
 }

@@ -39,4 +39,8 @@ export class CustomerService {
   public SortDESC(): Observable<Customer> {
     return this.http.get<Customer>(`http://localhost:3000/customers?_sort=name&_order=desc`)
   }
+
+  public getCustomersOnPage(currentPage: any, itemsPerPage: any): Observable<Customer> {
+    return this.http.get<Customer>(`http://localhost:3000/customers?_page=${currentPage}&_limit=${itemsPerPage}`)
+  }
 }
